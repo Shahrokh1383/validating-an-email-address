@@ -1,5 +1,5 @@
 //validating an email address
-#include <iostream>
+/*#include <iostream>
 #include <string>
 using namespace std;
 struct E_mail
@@ -42,4 +42,45 @@ int main()
 		cout << "invalid email address\n";
 	}
 	return 0;
-}
+}*/
+
+
+/*#include <iostream>
+using namespace std;
+struct email {
+	char address[255];
+	bool isvalid()
+	{
+		int countAtsign = 0, positionAt = -1, positionDot = -1;
+		for (int i = 0; address[i] != '\0'; i++) {
+			if (address[i] == '@') {
+				countAtsign++;
+				if (positionAt == -1) {
+					positionAt = i;
+				}
+			}
+			if (address[i] == '.') {
+				positionDot = i;
+			}
+
+		}
+		if (countAtsign == 1 && positionAt != 0 && positionAt < positionDot) {
+			return true;
+		}
+		return false;
+	}
+};
+int main()
+{
+	email e;
+	cin >> e.address;
+	if (e.isvalid()) {
+		cout << "is valid";
+	}
+	else if (!e.isvalid())
+	{
+		cout << "is invalid";
+	}
+
+	return 2;
+}*/
